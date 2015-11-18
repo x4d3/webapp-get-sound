@@ -12,11 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 
-@WebServlet(
-        name = "MyServlet", 
-        urlPatterns = {"/hello"}
-    )
+@WebServlet(name = "MyServlet", urlPatterns = { "/hello" })
 public class HelloServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("audio/x-wav");
@@ -33,4 +35,3 @@ public class HelloServlet extends HttpServlet {
 		doGet(request, response);
 	}
 }
-    
